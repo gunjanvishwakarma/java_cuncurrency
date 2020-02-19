@@ -22,7 +22,7 @@ public class ForkJoinPoolTest
             if(i == j) return nos[i];
             int mid = (i + j)/2;
             
-            RecursiveTask<Integer> recursiveTask1 = new RecursiveTask<>()
+            RecursiveTask<Integer> recursiveTask1 = new RecursiveTask<Integer>()
             {
                 @Override
                 protected Integer compute()
@@ -31,7 +31,7 @@ public class ForkJoinPoolTest
                 }
             };
             
-            RecursiveTask<Integer> recursiveTask2 = new RecursiveTask<>()
+            RecursiveTask<Integer> recursiveTask2 = new RecursiveTask<Integer>()
             {
                 @Override
                 protected Integer compute()
