@@ -17,12 +17,13 @@ public class CounterUsingSynchronizedTest
                 counter.count();
             });
             threads.add(t);
-            t.start();
+
         }
         
         threads.stream().forEach(t -> {
             try
             {
+                t.start();
                 t.join();
             }
             catch(InterruptedException e)
